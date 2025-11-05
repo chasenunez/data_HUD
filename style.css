@@ -1,0 +1,28 @@
+:root {
+  --brand-bg: #ffffff;
+  --brand-fore: #1b3550;
+  --muted: #666;
+  --header-padding: 12px;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  background: var(--brand-bg);
+  color: var(--brand-fore);
+}
+
+header#site-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: var(--header-padding);
+  border-bottom: 1px solid #eee;
+}
+
+#branding h1 { margin: 0; font-size: 1.25rem; }
+#branding .muted { margin:0; color:var(--muted); font-size:0.9rem; }
+
+#controls { display:flex; gap:8px; align-items:center; }
+
+#table { margin: 16px; }
