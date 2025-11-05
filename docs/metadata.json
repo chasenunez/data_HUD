@@ -1,11 +1,11 @@
 {
-  "generated_at": "2025-11-05T12:34:00Z",
-  "source_filename": "my_study_data.csv",
-  "n_rows": 1234,
-  "n_columns": 12,
-  "citation": "Doe, J. & Smith, A. (2024). Example dataset. Zenodo. https://doi.org/10.5281/zenodo.xxxxxx",
-  "license": "CC-BY 4.0",
-  "doi": "10.5281/zenodo.xxxxxx",
-  "contact": "data-owner@example.edu",
-  "notes": "Collected during field season 2022."
+  "generated_at": "2025-11-05T09:19:13.290697Z",
+  "source_filename": "iris.csv",
+  "n_rows": 150,
+  "n_columns": 5,
+  "citation": "",
+  "license": "",
+  "doi": "",
+  "contact": "",
+  "notes": ""
 }

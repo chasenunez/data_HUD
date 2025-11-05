@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Sepal.Length",
+    "field": "sepal.length",
+    "headerFilter": true,
+    "hozAlign": "left",
+    "sorter": "number",
+    "download": true,
+    "width": null
+  },
+  {
+    "title": "Sepal.Width",
+    "field": "sepal.width",
+    "headerFilter": true,
+    "hozAlign": "left",
+    "sorter": "number",
+    "download": true,
+    "width": null
+  },
+  {
+    "title": "Petal.Length",
+    "field": "petal.length",
+    "headerFilter": true,
+    "hozAlign": "left",
+    "sorter": "number",
+    "download": true,
+    "width": null
+  },
+  {
+    "title": "Petal.Width",
+    "field": "petal.width",
+    "headerFilter": true,
+    "hozAlign": "left",
+    "sorter": "number",
+    "download": true,
+    "width": null
+  },
+  {
+    "title": "Variety",
+    "field": "variety",
+    "headerFilter": true,
+    "hozAlign": "left",
+    "sorter": "string",
+    "download": true,
+    "width": null
+  }
+]
