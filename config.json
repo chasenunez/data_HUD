@@ -1,0 +1,11 @@
+{
+  "title": "My Research Data Explorer",
+  "subtitle": "Interactive preview of study dataset — filter, sort, export",
+  "logo": "images/my_logo.png",
+  "font": "Inter, Arial, sans-serif",
+  "primary_color": "#0b5fff",
+  "background_color": "#ffffff",
+  "table_options": {
+    "paginationSize": 50
+  }
+}
