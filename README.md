@@ -1,5 +1,5 @@
 # DataHUD
-a customizable user interface to display your data to the public. 
+A customizable user interface to display your data to the public. 
 
 This Script:
 
