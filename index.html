@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Data Explorer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- Tabulator CSS (CDN) -->
+  <link href="https://unpkg.com/tabulator-tables@6.3.4/dist/css/tabulator.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="site-header">
+    <div id="branding">
+      <img id="logo" src="" alt="logo" style="height:48px; display:none;">
+      <h1 id="title">Data Explorer</h1>
+      <p id="subtitle" class="muted"></p>
+    </div>
+
+    <div id="controls">
+      <input type="file" id="logo-upload" accept="image/*" title="Upload local logo (preview only)">
+      <button id="download-csv">Download CSV (with metadata)</button>
+      <button id="download-json">Download JSON</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="table-controls" style="margin-bottom:0.5rem">
+      <label>Quick filter: <input id="quick-search" placeholder="Type to search all columns"></label>
+      <select id="column-select"></select>
+      <button id="clear-filters">Clear Filters</button>
+    </div>
+
+    <div id="table"></div>
+
+    <section id="details" style="margin-top:1rem;">
+      <h3>Dataset metadata</h3>
+      <pre id="metadata-pre"></pre>
+    </section>
+  </main>
+
+  <!-- Tabulator script -->
+  <script src="https://unpkg.com/tabulator-tables@6.3.4/dist/js/tabulator.min.js"></script>
+  <!-- PapaParse if you choose to load CSV directly client-side (optional) -->
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
