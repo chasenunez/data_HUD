@@ -1,4 +1,4 @@
-This Script:
+# DataHUD is a customizable user interface to display your data to the public. This Script:
 
 * displays CSV/TSV tabular data as a beautiful, interactive table,
 * supports sorting & filtering,
