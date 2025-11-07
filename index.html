@@ -7,15 +7,49 @@
     <link href="https://unpkg.com/tabulator-tables@6.3/dist/css/tabulator.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
+    <style>
+        /* Add a moderate buffer around all page content */
+        body {
+            margin: 40px; /* creates space around entire content */
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff; /* optional, for clarity */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Optionally keep header and main content nicely spaced */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        #main-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #table-container,
+        #chart-container {
+            flex: 1 1 45%;
+            min-width: 400px;
+        }
+
+        #chart-container {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
   <header>
-    <!-- Logo and Title (customize as needed) -->
+    <!-- Logo and Title -->
     <img id="logo" src="image/logo.png" alt="Site Logo" style="height:50px;">
     <h1 id="site-title">My Data Explorer</h1>
   </header>
 
-  <!-- Filter controls (optional, for column-based filtering) -->
+  <!-- Filter controls -->
   <div id="filter-controls">
     Column: 
     <select id="filter-column"><!-- filled by JS --></select>
@@ -33,29 +67,23 @@
 
   <div id="main-container">
     <div id="table-container">
-      <!-- Tabulator table placeholder -->
       <div id="data-table"></div>
-      <!-- Download button -->
       <button id="download-csv">Download CSV</button>
     </div>
     <div id="chart-container">
       <div id="chart-controls">
-        <!-- X and Y axis selectors for plotting -->
         X: <select id="x-col"><!-- filled by JS --></select>
         Y: <select id="y-col"><!-- filled by JS --></select>
         <button id="plot-scatter">Scatter Plot</button>
         <button id="plot-histogram">Histogram (X only)</button>
       </div>
-      <!-- Chart.js drawing area -->
       <canvas id="chart-area"></canvas>
     </div>
   </div>
 
-  <!-- Tabulator JS -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/tabulator-tables@6.3/dist/js/tabulator.min.js"></script>
-  <!-- Chart.js JS -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
-  <!-- Main app script (detailed comments inside) -->
   <script src="app.js"></script>
 </body>
 </html>
