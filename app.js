@@ -1,7 +1,46 @@
 // Configuration: set your data source here.
 // If using local file, ensure data/mydata.csv exists in the repo.
 // Alternatively, set dataURL to an external CSV link.
-const dataURL = "data/iris.csv";  // <-- Customize this path or URL
+// Configuration: set your data source here
+const dataURL = "data/iris.csv"; // relative path or external URL
+
+// Helper: parse CSV text into array of objects
+function parseCSV(csvText) {
+    const [headerLine, ...lines] = csvText.trim().split("\n");
+    const headers = headerLine.split(",");
+    return lines.map(line => {
+        const values = line.split(",");
+        let obj = {};
+        headers.forEach((h, i) => obj[h.trim()] = values[i]?.trim());
+        return obj;
+    });
+}
+
+// Fetch and load CSV
+fetch(dataURL)
+    .then(response => {
+        if (!response.ok) throw new Error("Failed to load CSV file.");
+        return response.text();
+    })
+    .then(csvText => {
+        const data = parseCSV(csvText);
+        console.log("Loaded data:", data);
+
+        // Initialize Tabulator with parsed data
+        let table = new Tabulator("#data-table", {
+            data: data,
+            autoColumns: true,
+            layout: "fitDataTable",
+            height: "600px",
+            pagination: "local",
+            paginationSize: 50,
+        });
+    })
+    .catch(err => {
+        console.error("Error loading CSV:", err);
+        document.querySelector("#data-table").innerHTML =
+            `<p style="color:red;">Error loading data: ${err.message}</p>`;
+    });
 
 // Initialize the Tabulator table
 let table = new Tabulator("#data-table", {
