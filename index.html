@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Data Explorer Dashboard</title>
+    <!-- Tabulator CSS -->
+    <link href="https://unpkg.com/tabulator-tables@6.3/dist/css/tabulator.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <!-- Logo and Title (customize as needed) -->
+    <img id="logo" src="image/logo.png" alt="Site Logo" style="height:50px;">
+    <h1 id="site-title">My Data Explorer</h1>
+  </header>
+
+  <!-- Filter controls (optional, for column-based filtering) -->
+  <div id="filter-controls">
+    Column: 
+    <select id="filter-column"><!-- filled by JS --></select>
+    Operator:
+    <select id="filter-op">
+      <option value="=">=</option>
+      <option value="<">&lt;</option>
+      <option value=">">&gt;</option>
+      <!-- add more operators as needed -->
+    </select>
+    <input id="filter-val" type="text" placeholder="Value">
+    <button id="apply-filter">Filter</button>
+    <button id="clear-filter">Clear Filter</button>
+  </div>
+
+  <div id="main-container">
+    <div id="table-container">
+      <!-- Tabulator table placeholder -->
+      <div id="data-table"></div>
+      <!-- Download button -->
+      <button id="download-csv">Download CSV</button>
+    </div>
+    <div id="chart-container">
+      <div id="chart-controls">
+        <!-- X and Y axis selectors for plotting -->
+        X: <select id="x-col"><!-- filled by JS --></select>
+        Y: <select id="y-col"><!-- filled by JS --></select>
+        <button id="plot-scatter">Scatter Plot</button>
+        <button id="plot-histogram">Histogram (X only)</button>
+      </div>
+      <!-- Chart.js drawing area -->
+      <canvas id="chart-area"></canvas>
+    </div>
+  </div>
+
+  <!-- Tabulator JS -->
+  <script src="https://unpkg.com/tabulator-tables@6.3/dist/js/tabulator.min.js"></script>
+  <!-- Chart.js JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3"></script>
+  <!-- Main app script (detailed comments inside) -->
+  <script src="app.js"></script>
+</body>
+</html>

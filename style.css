@@ -1,0 +1,35 @@
+/* Basic site styling (customize colors, fonts here) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #336699;
+    color: white;
+}
+#logo { margin-right: 10px; }
+#site-title { margin: 0; }
+
+#filter-controls, #chart-controls {
+    margin: 10px 0;
+}
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+#table-container {
+    flex: 3;
+    min-width: 300px;
+    padding: 10px;
+}
+#chart-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+}
+@media (max-width: 800px) {
+    #main-container { flex-direction: column; }
+}
