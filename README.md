@@ -1,8 +1,9 @@
+```
 ▗▄▄▄  ▗▄▖▗▄▄▄▖▗▄▖     ▗▄▄▄▖▗▖  ▗▖▗▄▄▖ ▗▖    ▗▄▖ ▗▄▄▖ ▗▄▄▄▖▗▄▄▖ 
 ▐▌  █▐▌ ▐▌ █ ▐▌ ▐▌    ▐▌    ▝▚▞▘ ▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌
 ▐▌  █▐▛▀▜▌ █ ▐▛▀▜▌    ▐▛▀▀▘  ▐▌  ▐▛▀▘ ▐▌   ▐▌ ▐▌▐▛▀▚▖▐▛▀▀▘▐▛▀▚▖
 ▐▙▄▄▀▐▌ ▐▌ █ ▐▌ ▐▌    ▐▙▄▄▖▗▞▘▝▚▖▐▌   ▐▙▄▄▖▝▚▄▞▘▐▌ ▐▌▐▙▄▄▖▐▌ ▐▌
-                                                               
+ ```                                                              
 
 A simple, **fork-and-customize** GitHub Pages template that turns a CSV dataset into a small interactive data-explorer: sortable/filterable table, basic plotting (scatter / histogram), and an export of whatever subset of the table a visitor has curated.
 This README explains how to use the template, how to customize it (logo, header, colors, data source), and includes a practical example for exporting curated data with provenance/license metadata.
