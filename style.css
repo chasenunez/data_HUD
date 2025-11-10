@@ -11,6 +11,14 @@ header {
     color: white;
     font-size: 30px;
 }
+h1 {
+    color:#bba9d2;
+
+}
+h2 {
+    color:#64908a;
+
+}
 #logo { margin-right: 10px; }
 #site-title { margin: 0; }
 
