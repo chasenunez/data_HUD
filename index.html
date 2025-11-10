@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Data Explorer Dashboard</title>
+    <title>Data HUD</title>
     <!-- Tabulator CSS -->
     <link href="https://unpkg.com/tabulator-tables@6.3/dist/css/tabulator.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -46,10 +46,19 @@
   <header>
     <!-- Logo and Title -->
     <img id="logo" src="image/logo.png" alt="Site Logo" style="height:50px;">
-    <h1 id="site-title">My Data Explorer</h1>
+    <h1 id="site-title">My Data Heads-Up Display</h1>
     <button id="download-csv">Download CSV</button>
   </header>
+  <div id = "data-decsription">
+    <h1> Data Description </h1>
+    <p>
+        The **Iris dataset** is a well-known dataset in the field of machine learning and statistics, often used for classification tasks. It was introduced by the British biologist and statistician **Sir Ronald A. Fisher** in his 1936 paper, "The Use of Multiple Measurements in Taxonomic Problems." The dataset consists of 150 samples from three different species of iris flowers: *Iris setosa*, *Iris versicolor*, and *Iris virginica*. Each species is represented by 50 samples, with four features recorded for each sample: the sepal length, sepal width, petal length, and petal width (all in centimeters).
 
+        The Iris dataset is frequently used for testing and demonstrating various machine learning algorithms, particularly in classification tasks. It is often cited in textbooks and tutorials as a simple, clean, and well-understood example for introducing concepts such as supervised learning, clustering, and statistical analysis.
+
+        Over time, the dataset has become a benchmark for evaluating algorithms, and its relatively simple structure makes it ideal for educational purposes. The dataset is included in various programming libraries, including R and Python’s `sklearn`, and continues to serve as a foundational resource for data scientists and statisticians.
+</p>
+  </div>
   <!-- Filter controls -->
   <h1>Filter Data</h1>
   <div id="filter-controls">
