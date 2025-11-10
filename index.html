@@ -51,8 +51,9 @@
   </header>
 
   <!-- Filter controls -->
+  <h1>Filter Data</h1>
   <div id="filter-controls">
-    Filter by column: 
+    Column: 
     <select id="filter-column"><!-- filled by JS --></select>
     Operator:
     <select id="filter-op">
@@ -72,10 +73,11 @@
     </div>
     <div id="chart-container">
       <div id="chart-controls">
+        <h1>Plot Data</h1>
         X: <select id="x-col"><!-- filled by JS --></select>
         Y: <select id="y-col"><!-- filled by JS --></select>
-        <button id="plot-scatter">Scatter Plot (X and Y)</button>
         <button id="plot-histogram">Histogram (X only)</button>
+        <button id="plot-scatter">Scatter Plot (X and Y)</button>
       </div>
       <canvas id="chart-area"></canvas>
     </div>
