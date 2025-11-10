@@ -3,7 +3,25 @@
 ▐▌  █▐▌ ▐▌ █ ▐▌ ▐▌    ▐▌    ▝▚▞▘ ▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌   ▐▌ ▐▌ 
 ▐▌  █▐▛▀▜▌ █ ▐▛▀▜▌    ▐▛▀▀▘  ▐▌  ▐▛▀▘ ▐▌   ▐▌ ▐▌▐▛▀▚▖▐▛▀▀▘▐▛▀▚▖ 
 ▐▙▄▄▀▐▌ ▐▌ █ ▐▌ ▐▌    ▐▙▄▄▖▗▞▘▝▚▖▐▌   ▐▙▄▄▖▝▚▄▞▘▐▌ ▐▌▐▙▄▄▖▐▌ ▐▌
-```                                              
+```  
+
+                                           
+ ```                                          
+                 █████████      ███████   
+                  █ ███████████████████   
+                  █ ███████████████████   
+                  █  █████████████████    
+                   █ █████████████████    
+      █            █  ████████████████    
+    ███ ██         █  ███████████████     
+    ███████████       ███████████████     
+   █████████████   ████ ██ █████  ██      
+      ██████████    ██ █ █ ████ █ █ █     
+       ████████    ██ ████   █    ████    
+       ██   ███       █  █        █  █    
+      ██ █  ██         ████      ████     
+                                      ████
+``` 
      
 
 A simple, **fork-and-customize** GitHub Pages template that turns a CSV dataset into a small interactive data-explorer: sortable/filterable table, basic plotting (scatter / histogram), and an export of whatever subset of the table a visitor has curated.
