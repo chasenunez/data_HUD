@@ -7,8 +7,9 @@ header {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #bba9d2;
+    background-color: #FFFFFF;
     color: white;
+    font-size: 30px;
 }
 #logo { margin-right: 10px; }
 #site-title { margin: 0; }
@@ -31,6 +32,17 @@ header {
     min-width: 300px;
     padding: 10px;
 }
+#data-description{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #d3d3d3;
+    color: #616161;
+    border-radius: 30px;
+
+}
+
+
 @media (max-width: 600px) {
     #main-container { flex-direction: column; }
 }
