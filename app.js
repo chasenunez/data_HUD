@@ -3,8 +3,6 @@
  *
  * Key change: instead of autoColumns, we explicitly build Tabulator `columns`
  * from the parsed objects so fields and formatting are guaranteed to match.
- *
- * Drop this into your repo; make sure index.html has the expected DOM elements.
  */
 
 /* ---------- CONFIG ---------- */
