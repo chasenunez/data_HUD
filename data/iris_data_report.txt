@@ -1,0 +1,3 @@
+Data validation errors:
+  Row ?, Col ? [None]: The data resource has an error: path "/var/folders/bc/r1ydrb6j66j8l7_k_vlfn6nw0000gp/T/tmpnoumx3jf.csv" is not safe
+    Suggestion: Inspect the flagged value and fix formatting or data entry issues.

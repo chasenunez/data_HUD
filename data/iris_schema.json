@@ -1,0 +1,61 @@
+{
+  "fields": [
+    {
+      "name": "sepal_length",
+      "type": "number",
+      "constraints": {
+        "minimum": 4.3,
+        "maximum": 7.9,
+        "required": true
+      }
+    },
+    {
+      "name": "sepal_width",
+      "type": "number",
+      "constraints": {
+        "minimum": 2.0,
+        "maximum": 4.4,
+        "required": true
+      }
+    },
+    {
+      "name": "petal_length",
+      "type": "number",
+      "constraints": {
+        "minimum": 1.0,
+        "maximum": 6.9,
+        "required": true
+      }
+    },
+    {
+      "name": "petal_width",
+      "type": "number",
+      "constraints": {
+        "minimum": 0.1,
+        "maximum": 2.5,
+        "required": true
+      }
+    },
+    {
+      "name": "variety",
+      "type": "string",
+      "constraints": {
+        "required": true
+      }
+    }
+  ],
+  "missingValues": [
+    "",
+    "NaN",
+    "N/A",
+    "na",
+    "-999.0",
+    "null",
+    "-999.000000",
+    "n/a",
+    "-999",
+    "nan",
+    "NULL",
+    "NA"
+  ]
+}
