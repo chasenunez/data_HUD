@@ -4,13 +4,9 @@
  * Key change: instead of autoColumns, we explicitly build Tabulator `columns`
  * from the parsed objects so fields and formatting are guaranteed to match.
  */
-
-/* ---------- CONFIG ---------- */
 const dataURL = "data/iris.csv";
 const MISSING_TOKENS = new Set(["", "na", "n/a", "nan", "-999", "-999.0", "null"]);
 const DEFAULT_HIST_BINS = 10;
-
-/* ---------- Helpers (CSV parser etc.) ---------- */
 function removeBOM(text) { if (typeof text === "string" && text.charCodeAt(0) === 0xFEFF) return text.slice(1); return text; }
 
 function parseCSVToRows(csvText) {
@@ -71,11 +67,7 @@ function rowsToObjects(rows) {
   }
   return objects;
 }
-
-/* ---------- DOM helper ---------- */
 const $ = id => document.getElementById(id) || null;
-
-/* ---------- CSV download with metadata helper ---------- */
 function downloadCSVWithMetadata(rowsArray, filename = "exported-data.csv", metadata = {}) {
   if (!Array.isArray(rowsArray) || rowsArray.length === 0) { alert("No rows to export."); return; }
   const fields = Object.keys(rowsArray[0]);
@@ -101,8 +93,6 @@ function downloadCSVWithMetadata(rowsArray, filename = "exported-data.csv", meta
   link.click();
   document.body.removeChild(link);
 }
-
-/* ---------- Main ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   let table = null;
   let currentChart = null;
@@ -197,9 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error loading/parsing CSV:", err);
       if (tableHolder) tableHolder.innerHTML = `<p style="color:red;">Error loading data: ${err.message}</p>`;
     });
-
-  /* ---------- UI handlers ---------- */
-
   if (applyFilterBtn) {
     applyFilterBtn.addEventListener("click", () => {
       if (!table) { alert("Table not ready."); return; }
@@ -228,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function destroyChart() { if (currentChart) { try { currentChart.destroy(); } catch (e) {} currentChart = null; } }
+  function destroyChart() { if (currentChart) { try { currentChart.destroy(); } catch (e) { console.warn("chart destroy failed:", e); } currentChart = null; } }
 
   if (plotScatterBtn) {
     plotScatterBtn.addEventListener("click", () => {
@@ -262,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
       vals.forEach(v => { let i = Math.floor(((v - min) / range) * bins); if (i >= bins) i = bins - 1; if (i < 0) i = 0; counts[i]++; });
       const labels = counts.map((_, i) => { const left = min + (i * range / bins); const right = min + ((i + 1) * range / bins); return `${left.toFixed(2)}–${right.toFixed(2)}`; });
       destroyChart();
-      const ctx = chartCanvas.getContext("2.0") || chartCanvas.getContext("2d");
+      const ctx = chartCanvas.getContext("2d");
       currentChart = new Chart(ctx, { type: "bar", data: { labels, datasets: [{ label: `${col} (count)`, data: counts }] }, options: { responsive: true, scales: { x: { title: { display: true, text: col } }, y: { title: { display: true, text: "Count" } } } } });
     });
   }
