@@ -4,6 +4,8 @@ A static, fork-it-yourself GitHub Pages template that turns a CSV into a browsab
 
 [Live example using the Iris dataset](https://chasenunez.github.io/data_HUD/)
 
+![hud_description](image/overview.png)
+
 ## Quick start
 
 1. **Fork** this repo.
